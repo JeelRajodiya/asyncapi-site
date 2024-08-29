@@ -36,7 +36,7 @@ async function start() {
     configDir: 'config',
     financeDir: 'finance',
     year: latestYear,
-    jsonDataDir: 'json-data'
+    jsonDataDir: 'latest-json-data'
   });
 }
 

@@ -1,14 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 const buildFinanceInfoList = require('../../scripts/finance/index');
-const { expensesYaml, expensesLinkYaml, expensesjson, expensesLinkjson } = require("../fixtures/financeData")
+const { expensesYaml, expensesLinkYaml, expensesjson, expensesLinkjson } = require('../fixtures/financeData');
 
 describe('buildFinanceInfoList', () => {
   const testDir = path.resolve(__dirname, 'test-finance-info');
   const configDir = 'config';
   const financeDir = 'finance';
   const year = '2024';
-  const jsonDataDir = 'json-data';
+  const jsonDataDir = 'latest-json-data';
 
   beforeAll(() => {
     // Create test directory structure

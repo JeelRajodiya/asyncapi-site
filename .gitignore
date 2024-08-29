@@ -16,7 +16,7 @@ meetings.json
 .env
 cypress/screenshots
 cypress/videos
-/config/finance/json-data/*
+/config/finance/latest-json-data/*
 /pages/**/*.mdx
 *storybook.log
 /storybook-static/

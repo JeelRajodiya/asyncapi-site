@@ -1,6 +1,6 @@
 import type { Expenses } from '@/types/FinancialSummary/BarChartComponent';
 
-import ExpensesData from '../../config/finance/json-data/Expenses.json';
+import ExpensesData from '../../config/finance/latest-json-data/Expenses.json';
 import Card from './Card';
 
 /**
