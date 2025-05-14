@@ -1,0 +1,406 @@
+PASS tests/check-locales.test.js
+  check-locales
+    ΓêÜ should extract keys from a JSON object (91 ms)
+    ΓêÜ should read JSON files in a directory (1 ms)
+    ΓêÜ should validate locales and find no errors (1 ms)
+    ΓêÜ should validate locales and find missing keys (58 ms)
+    ΓêÜ should handle errors during validation (17 ms)
+    ΓêÜ should log an error if no language directories are found (1 ms)
+    ΓêÜ should log an error if JSON file reading fails (8 ms)
+    ΓêÜ should handle directory reading errors (6 ms)
+    ΓêÜ should handle non-Error exceptions during validation (2 ms)
+    ΓêÜ should handle JSON parsing errors with non-Error objects (1 ms)
+    ΓêÜ should handle the case when a language has no file (1 ms)
+    ΓêÜ should handle files with no missing keys (1 ms)
+    ΓêÜ should log when skipping files found in only one language (1 ms)
+
+PASS tests/build-rss.test.ts
+  rssFeed
+    ΓêÜ should generate RSS feed and write to file (36 ms)
+    ΓêÜ should prioritize featured posts over non-featured ones (7 ms)
+    ΓêÜ should sort posts by date in descending order (4 ms)
+    ΓêÜ should set correct enclosure type based on image extension (3 ms)
+    ΓêÜ should catch and handle errors when write operation fails (56 ms)
+    ΓêÜ should throw an error when posts.json is malformed (2 ms)
+    ΓêÜ should handle empty posts array (5 ms)
+    ΓêÜ should throw an error when post is missing required fields
+    ΓêÜ should properly identify posts missing dates and include them in error message
+    ΓêÜ should use default mime type when encountering an unsupported image extension (2 ms)
+
+PASS tests/casestudies/index.test.ts
+  buildCaseStudiesList
+    ΓêÜ should read YAML files and create a JSON file with case studies (46 ms)
+    ΓêÜ should throw an error with incorrect parameters (5 ms)
+    ΓêÜ should throw an error when the output file path is invalid (3 ms)
+    ΓêÜ should throw an error when YAML content is invalid (6 ms)
+
+PASS tests/tools/combine-tools.test.ts
+  combineTools function
+    ΓêÜ should combine tools and create correct JSON files (13 ms)
+    ΓêÜ should handle tools with missing language or technology (2 ms)
+    ΓêÜ should throw an error when tools are passed as an array instead of object (31 ms)
+    ΓêÜ should sort tools alphabetically by title (27 ms)
+    ΓêÜ should log validation errors to console.error (2 ms)
+    ΓêÜ should handle tools with multiple languages, including new ones (3 ms)
+    ΓêÜ should add a new language and technology when not found in the existing lists (1 ms)
+    ΓêÜ should add a new language when it is not found in the existing languages list (2 ms)
+    ΓêÜ should handle valid tool objects (2 ms)
+    ΓêÜ should handle tool objects without repoUrl (2 ms)
+    ΓêÜ should throw an error when fs.writeFileSync fails (1 ms)
+    ΓêÜ should throw an error when there is an invalid category
+    ΓêÜ should throw an error when URL parsing fails (1 ms)
+    ΓêÜ should handle errors when processing tools with circular references (1 ms)
+    ΓêÜ should handle tools with missing data and filters
+    ΓêÜ should log an error when tool or anotherTool has no title (1 ms)
+    ΓêÜ should skip inherited prototype properties in automatedTools (1 ms)
+
+[2025-04-26 11:01:25.033 PM] [32minfo[39m: 	The following events got fetched: [
+  {
+    "title": "Community Meeting",
+    "calLink": "https://www.google.com/calendar/event?eid=example",
+    "url": "https://github.com/asyncapi/community/issues/123",
+    "banner": "https://example.com/banner.jpg",
+    "date": "2024-02-20T16:00:00.000Z"
+  }
+]
+[2025-04-26 11:01:25.038 PM] [32minfo[39m: 	The following are the Newsroom Youtube videos: [
+  {
+    "image_url": "https://i.ytimg.com/vi/K7fvKbOfqOg/hqdefault.jpg",
+    "title": "Developer Experience Working Group, 14:00 UTC Thursday May 23rd 2024",
+    "description": "Define our vision and plans https://github.com/asyncapi/community/issues/1220.",
+    "videoId": "K7fvKbOfqOg"
+  },
+  {
+    "image_url": "https://i.ytimg.com/vi/94SSXX78VCU/hqdefault.jpg",
+    "title": "Essential Building Blocks Working Group, 18:00 UTC Tuesday May 14th 2024",
+    "description": "https://github.com/asyncapi/community/issues/1200.",
+    "videoId": "94SSXX78VCU"
+  }
+]
+PASS tests/markdown/check-markdown.test.ts
+  Frontmatter Validator
+    ΓêÜ validates authors array and returns specific errors (12 ms)
+    ΓêÜ validates docs frontmatter for required fields (2 ms)
+    ΓêÜ checks for errors in markdown files in a directory (38 ms)
+    ΓêÜ returns multiple validation errors for invalid blog frontmatter (3 ms)
+    ΓêÜ logs error to console when an error occurs in checkMarkdownFiles (18 ms)
+    ΓêÜ skips the "reference/specification" folder during validation (18 ms)
+    ΓêÜ processes files outside the "reference/specification" folder (11 ms)
+    ΓêÜ logs and rejects when an exception occurs while processing a file (21 ms)
+    ΓêÜ should handle main function errors and exit with status 1 (3 ms)
+    ΓêÜ should handle successful main function execution (297 ms)
+    ΓêÜ should return true or false for URLs (3 ms)
+    ΓêÜ should throw an error if frontmatter is missing (11 ms)
+    ΓêÜ does not push errors if docs frontmatter is valid (3 ms)
+    ΓêÜ skips non-directory, non-md files without errors (8 ms)
+    ΓêÜ processes markdown files in directories other than reference/specification (8 ms)
+
+[2025-04-26 11:01:25.054 PM] [32minfo[39m: 	The following are the Newsroom Youtube videos: [
+  {
+    "image_url": "https://i.ytimg.com/vi/K7fvKbOfqOg/hqdefault.jpg",
+    "title": "Developer Experience Working Group, 14:00 UTC Thursday May 23rd 2024",
+    "description": "Define our vision and plans https://github.com/asyncapi/community/issues/1220.",
+    "videoId": "K7fvKbOfqOg"
+  },
+  {
+    "image_url": "https://i.ytimg.com/vi/94SSXX78VCU/hqdefault.jpg",
+    "title": "Essential Building Blocks Working Group, 18:00 UTC Tuesday May 14th 2024",
+    "description": "https://github.com/asyncapi/community/issues/1200.",
+    "videoId": "94SSXX78VCU"
+  }
+]
+[2025-04-26 11:01:25.056 PM] [32minfo[39m: 	The following events got fetched: [
+  {
+    "title": "Community Meeting",
+    "calLink": "https://www.google.com/calendar/event?eid=example",
+    "url": "https://github.com/asyncapi/community/issues/123",
+    "banner": "https://example.com/banner.jpg",
+    "date": "2024-02-20T16:00:00.000Z"
+  }
+]
+PASS tests/build-pages.test.ts
+  capitalizeJsxTags
+    ΓêÜ should capitalize JSX tags (13 ms)
+    ΓêÜ should not capitalize non-JSX tags (1 ms)
+  copyAndRenameFiles
+    ΓêÜ should copy and rename files correctly (12 ms)
+    ΓêÜ should not rename files with extensions other than .md (7 ms)
+    ΓêÜ should handle non-directory and non-file entries (2 ms)
+    ΓêÜ should create a directory if it does not exist (2 ms)
+
+PASS tests/build-newsroom-videos.test.ts
+  buildNewsroomVideos
+    ΓêÜ should mockFetch video data and write to file (19 ms)
+    ΓêÜ should handle mockFetch errors (2 ms)
+    ΓêÜ should handle invalid API response (1 ms)
+    ΓêÜ should handle HTTP status code (1 ms)
+    ΓêÜ should handle file write errors (3 ms)
+    ΓêÜ should throw an error if YOUTUBE_TOKEN environment variable is not set (46 ms)
+
+PASS tests/build-meetings.test.ts
+  buildMeetings
+    ΓêÜ should fetch events, process them, and write to a file (23 ms)
+    ΓêÜ should throw an error if the Google API call fails (9 ms)
+    ΓêÜ should throw an error if authentication fails (2 ms)
+    ΓêÜ should handle file write errors (2 ms)
+    ΓêÜ should throw an error if the data structure received from Google Calendar API is invalid (43 ms)
+    ΓêÜ should throw an error if start.dateTime is missing in the event (2 ms)
+    ΓêÜ should throw an error if CALENDAR_SERVICE_ACCOUNT is not set (4 ms)
+    ΓêÜ should throw an error if CALENDAR_ID is not set (4 ms)
+
+PASS tests/build-docs/convertDocPosts.test.ts
+  convertDocPosts
+    ΓêÜ should convert a doc object to an array (3 ms)
+    ΓêÜ should return an array with an empty object for an empty doc object (1 ms)
+    ΓêÜ should handle a doc object with no children
+    ΓêÜ should handle nested children (1 ms)
+    ΓêÜ should throw an error if docObject is undefined (1 ms)
+    ΓêÜ should throw an error if docObject is null
+
+PASS tests/build-docs/buildNavTree.test.ts
+  buildNavTree
+    ΓêÜ should create a tree structure from nav items (6 ms)
+    ΓêÜ should handle items without sectionId (1 ms)
+    ΓêÜ should throw and catch an error if a parent section is missing (1 ms)
+    ΓêÜ should handle items with missing required fields gracefully (1 ms)
+    ΓêÜ should throw an error when parent references are invalid (1 ms)
+    ΓêÜ should sort children within subsections based on weight (1 ms)
+
+PASS tests/build-docs/addDocButtons.test.ts
+  addDocButtons
+    ΓêÜ should add next and previous page information (3 ms)
+    ΓêÜ should set nextPage correctly when next item is a root element (1 ms)
+    ΓêÜ should throw an error if treePosts is missing (1 ms)
+    ΓêÜ should throw an error if docPosts is missing
+    ΓêÜ should handle invalid data structure in treePosts (1 ms)
+
+PASS tests/utils.test.ts
+  convertToJson
+    ΓêÜ should return JSON object if input is valid JSON string (1 ms)
+    ΓêÜ should return JavaScript object if input is valid YAML string (9 ms)
+    ΓêÜ should return input if input is already an object (1 ms)
+    ΓêÜ should throw an error if input is invalid JSON and invalid YAML (2 ms)
+
+PASS tests/finance/index.test.ts
+  buildFinanceInfoList
+    ΓêÜ should create JSON files from YAML files (16 ms)
+    ΓêÜ should throw an error if YAML files are not found (2 ms)
+    ΓêÜ should throw an error if JSON directory creation fails (6 ms)
+    ΓêÜ should throw an error if YAML content is invalid (6 ms)
+
+PASS tests/adopters/index.test.ts
+  buildAdoptersList
+    ΓêÜ should call writeJSON with correct arguments (2 ms)
+
+PASS tests/readAndWriteJson.test.ts
+  writeJSON
+    ΓêÜ should read a file, convert it to JSON, and write the JSON to another file (1 ms)
+    ΓêÜ should throw an error if reading the file fails (3 ms)
+    ΓêÜ should throw an error if converting the file content to JSON fails (1 ms)
+    ΓêÜ should throw an error if writing the file fails (1 ms)
+
+PASS tests/index.test.ts
+  start function
+    ΓêÜ should call all functions in the correct order (11 ms)
+    ΓêÜ should throw an error if no finance data is found (17 ms)
+
+PASS tests/tools/tools-object.test.ts
+  Tools Object
+    ΓêÜ should create a tool object with provided parameters (7 ms)
+    ΓêÜ should create a tool object one parameters (1 ms)
+    ΓêÜ should convert tools data correctly (8 ms)
+    ΓêÜ should assign tool to Others category if no matching category is found (2 ms)
+    ΓêÜ should log errors for invalid .asyncapi-tool file (1 ms)
+    ΓêÜ should add duplicate tool objects to the same category (1 ms)
+    ΓêÜ should add tool to Others category only once
+    ΓêÜ should throw an error if axios.get fails (23 ms)
+    ΓêÜ should handle malformed JSON in tool file (22 ms)
+    ΓêÜ should use repository description when tool description is missing (1 ms)
+    ΓêÜ should skip files that do not start with .asyncapi-tool (1 ms)
+    ΓêÜ should not add the same tool object to the same category twice when a tool lists the same category multiple times
+
+[2025-04-26 11:01:25.580 PM] [33mwarn[39m: 	Script is not failing, it is just dropping errors for further investigation.
+Invalid .asyncapi-tool file. 
+Located in: undefined. 
+Validation errors: [
+  {
+    "instancePath": "",
+    "schemaPath": "#/required",
+    "keyword": "required",
+    "params": {
+      "missingProperty": "title"
+    },
+    "message": "must have required property 'title'"
+  }
+]
+[2025-04-26 11:01:25.583 PM] [33mwarn[39m: 	Script is not failing, it is just dropping errors for further investigation.
+Invalid .asyncapi-tool file. 
+Located in: undefined. 
+Validation errors: [
+  {
+    "instancePath": "",
+    "schemaPath": "#/required",
+    "keyword": "required",
+    "params": {
+      "missingProperty": "title"
+    },
+    "message": "must have required property 'title'"
+  }
+]
+[2025-04-26 11:01:25.617 PM] [33mwarn[39m: 	Script is not failing, it is just dropping errors for further investigation.
+Invalid .asyncapi-tool file. 
+Located in: undefined. 
+Validation errors: [
+  {
+    "instancePath": "",
+    "schemaPath": "#/required",
+    "keyword": "required",
+    "params": {
+      "missingProperty": "title"
+    },
+    "message": "must have required property 'title'"
+  }
+]
+[2025-04-26 11:01:25.617 PM] [33mwarn[39m: 	Script is not failing, it is just dropping errors for further investigation.
+Invalid .asyncapi-tool file. 
+Located in: undefined. 
+Validation errors: [
+  {
+    "instancePath": "",
+    "schemaPath": "#/required",
+    "keyword": "required",
+    "params": {
+      "missingProperty": "title"
+    },
+    "message": "must have required property 'title'"
+  }
+]
+PASS tests/build-tools.test.ts
+  buildTools
+    ΓêÜ should extract, convert, combine tools, and write to file (22 ms)
+    ΓêÜ should handle getData error (25 ms)
+    ΓêÜ should handle file write errors (2 ms)
+
+PASS tests/tools/extract-tools-github.test.ts
+  getData
+    ΓêÜ should return data when API call is successful (13 ms)
+    ΓêÜ should return data when API call is successful, when items are more then one page (1008 ms)
+    ΓêÜ should throw an error when API call fails (11 ms)
+    ΓêÜ should throw an error when GITHUB_TOKEN is not set (14 ms)
+
+PASS tests/build-post-list.test.ts
+  buildPostList
+    ΓêÜ writes the file successfully (669 ms)
+    ΓêÜ writes valid JSON content (30 ms)
+    ΓêÜ correctly structures docs entries (11 ms)
+    ΓêÜ correctly structures blog entries (10 ms)
+    ΓêÜ handles a directory with only section files (14 ms)
+    ΓêÜ handles multiple release notes correctly (10 ms)
+    ΓêÜ throws an error when accessing non-existent directory (38 ms)
+    ΓêÜ does not process specification files without a title (15 ms)
+    ΓêÜ does not process specification files with "next-spec" in the filename (12 ms)
+    ΓêÜ does not process specification files with "explorer" in the filename (8 ms)
+    ΓêÜ throws "Error while building post list" when front matter is invalid (7 ms)
+    ΓêÜ throws an error if no post directories are provided (6 ms)
+    ΓêÜ throws specific error message when basePath parameter is undefined (4 ms)
+    ΓêÜ throws specific error message when writeFilePath parameter is undefined (4 ms)
+    ΓêÜ throws an error when details object is invalid (5 ms)
+    ΓêÜ does not add item when slug does not match any section (263 ms)
+    ΓêÜ sets sectionSlug to empty string if not provided (9 ms)
+    ΓêÜ uses directory name as fallback title when front matter title is missing (9 ms)
+    slugifyToC
+      ΓêÜ handles heading ids like {# myHeadingId} (3 ms)
+      ΓêÜ handles heading ids like {<a name="myHeadingId"/>} (3 ms)
+      ΓêÜ handles empty strings (4 ms)
+      ΓêÜ returns empty string for malformed heading IDs (3 ms)
+      ΓêÜ handles mixed format heading IDs (3 ms)
+      ΓêÜ handles invalid input types gracefully (4 ms)
+      ΓêÜ ignores invalid characters in heading IDs (3 ms)
+
+PASS tests/dashboard/build-dashboard.test.ts (12.844 s)
+  GitHub Discussions Processing
+    ΓêÜ should fetch additional discussion details when comments have next page (1020 ms)
+    ΓêÜ should handle rate limit warnings (505 ms)
+    ΓêÜ should handle pagination (1017 ms)
+    ΓêÜ should handle complete failure (1 ms)
+    ΓêÜ should successfully process and write data (2545 ms)
+    ΓêÜ should get labels correctly (1 ms)
+    ΓêÜ should map good first issues (1 ms)
+    ΓêÜ should map good first issues with complete data validation
+    ΓêÜ should handle discussion retrieval (18 ms)
+    ΓêÜ should process hot discussions (1007 ms)
+    ΓêÜ should handle undefined reviews.nodes gracefully (1002 ms)
+    ΓêÜ should write to file (3 ms)
+    ΓêÜ should handle parsing errors in processHotDiscussions (13 ms)
+    ΓêÜ should handle write failures gracefully (4 ms)
+    ΓêÜ should throw error when GITHUB_TOKEN is not set (1 ms)
+    ΓêÜ should handle missing author in discussions (1013 ms)
+    ΓêÜ should correctly calculate score based on months since update (1015 ms)
+
+PASS tests/markdown/check-edit-links.test.ts (17.878 s)
+  URL Checker Tests
+    determineEditLink
+      ΓêÜ should generate correct edit link for docs with /docs prefix (10 ms)
+      ΓêÜ should generate correct edit link for docs without /docs prefix (1 ms)
+      ΓêÜ should generate correct edit link for docs with a config
+      ΓêÜ should return null when no matching target is found (1 ms)
+    generatePaths
+      ΓêÜ should generate correct paths for markdown files (47 ms)
+      ΓêÜ should skip _section.md files (3 ms)
+      ΓêÜ should skip non-markdown files (1 ms)
+      ΓêÜ should handle errors gracefully (66 ms)
+    processBatch
+      ΓêÜ should process valid URLs correctly (3 ms)
+      ΓêÜ should detect 404 URLs (1 ms)
+      ΓêÜ should handle network errors (1 ms)
+      ΓêÜ should ignore files in ignoreFiles list (1 ms)
+      ΓêÜ should handle request timeouts (10011 ms)
+    checkUrls
+      ΓêÜ should process all URLs in batches (1013 ms)
+      ΓêÜ should handle mixed responses correctly (1010 ms)
+    main
+      ΓêÜ should run successfully when all URLs are valid (1024 ms)
+      ΓêÜ should report invalid URLs when found (1007 ms)
+      ΓêÜ should handle errors gracefully (10 ms)
+
+A worker process has failed to exit gracefully and has been force exited. This is likely caused by tests leaking due to improper teardown. Try running with --detectOpenHandles to find leaks. Active timers can also cause this, ensure that .unref() was called on them.
+---------------------------|---------|----------|---------|---------|-------------------
+File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+---------------------------|---------|----------|---------|---------|-------------------
+All files                  |     100 |      100 |     100 |     100 |                   
+ scripts                   |     100 |      100 |     100 |     100 |                   
+  build-docs.ts            |     100 |      100 |     100 |     100 |                   
+  build-meetings.ts        |     100 |      100 |     100 |     100 |                   
+  build-newsroom-videos.ts |     100 |      100 |     100 |     100 |                   
+  build-pages.ts           |     100 |      100 |     100 |     100 |                   
+  build-post-list.ts       |     100 |      100 |     100 |     100 |                   
+  build-rss.ts             |     100 |      100 |     100 |     100 |                   
+  build-tools.ts           |     100 |      100 |     100 |     100 |                   
+  index.ts                 |     100 |      100 |     100 |     100 |                   
+ scripts/adopters          |     100 |      100 |     100 |     100 |                   
+  index.ts                 |     100 |      100 |     100 |     100 |                   
+ scripts/casestudies       |     100 |      100 |     100 |     100 |                   
+  index.ts                 |     100 |      100 |     100 |     100 |                   
+ scripts/dashboard         |     100 |      100 |     100 |     100 |                   
+  build-dashboard.ts       |     100 |      100 |     100 |     100 |                   
+  issue-queries.ts         |     100 |      100 |     100 |     100 |                   
+ scripts/finance           |     100 |      100 |     100 |     100 |                   
+  index.ts                 |     100 |      100 |     100 |     100 |                   
+ scripts/markdown          |     100 |      100 |     100 |     100 |                   
+  check-edit-links.ts      |     100 |      100 |     100 |     100 |                   
+  check-markdown.ts        |     100 |      100 |     100 |     100 |                   
+ scripts/tools             |     100 |      100 |     100 |     100 |                   
+  combine-tools.ts         |     100 |      100 |     100 |     100 |                   
+  extract-tools-github.ts  |     100 |      100 |     100 |     100 |                   
+  tools-object.ts          |     100 |      100 |     100 |     100 |                   
+ scripts/utils             |     100 |      100 |     100 |     100 |                   
+  check-locales.ts         |     100 |      100 |     100 |     100 |                   
+  functions.ts             |     100 |      100 |     100 |     100 |                   
+  logger.ts                |     100 |      100 |     100 |     100 |                   
+  readAndWriteJson.ts      |     100 |      100 |     100 |     100 |                   
+---------------------------|---------|----------|---------|---------|-------------------
+Test Suites: 22 passed, 22 total
+Tests:       190 passed, 190 total
+Snapshots:   0 total
+Time:        19.065 s
+Ran all test suites.
